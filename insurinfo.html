@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+
+	body {		
+	width: 900px;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 0%;
+	margin-bottom: 0%;
+	padding-left: 1px;
+	padding-right: 1px;
+	border-left: 10px;
+	border-right: 10px;
+	border-color: black;
+	
+	box-shadow: 2px 2px 2px 2px grey;
+	border-right: 5px;
+	border-left: 5px;
+	border-bottom: 5px;
+	border-top: 5px;
+	font-family: arial, sans-serif;
+
+	}
+	#qoute{
+        width: 300px;
+        height: 300px;
+		margin-left: 10px;
+		margin-right: 10px;
+		border-right: 5px;
+	   border-left: 5px;
+	  
+	  background-color: transparent;
+	
+		
+	} 
+</style>
+
+	
+</head>
+<body>
+
+<header>
+<h3>Great coverage begins with a custom qoute</h3>
+</header>
+ 
+
+<form id="qoute">
+
+  Your name: <input type="text" name="sname"><br><br><br>
+  Age: <input type="text" name="yage"><br><br><br>
+  Country: <input type="text" name="yname"><br><br><br>
+
+
+  Horsepower of your car: <input type="text" name="number"><br><br>
+  <input type="button" onclick="myFunction()" value="calculate">
+
+  <select id="space">
+
+  <option>Austria</option>
+  <option>Hungary</option>
+  <option>Greece</option>
+  
+</select>
+</form>
+
+<script>
+	var info= 'Your name, Age, Country, Hoursepower of your car'
+function myFunction() {
+  document.getElementById("qoute").calculate();
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>
