@@ -32,8 +32,7 @@
 		border-right: 5px;
 	   border-left: 5px;
 	  
-	  background-color: transparent;
-	
+		
 		
 	} 
 </style>
@@ -50,26 +49,40 @@
 <form id="qoute">
 
   Your name: <input type="text" name="sname"><br><br><br>
-  Age: <input type="text" name="yage"><br><br><br>
-  Country: <input type="text" name="yname"><br><br><br>
-
-
-  Horsepower of your car: <input type="text" name="number"><br><br>
-  <input type="button" onclick="myFunction()" value="calculate">
-
+  Age: <input id="age" type="text" name="yage"><br><br><br>
+  Country: 
   <select id="space">
 
-  <option>Austria</option>
+  <option value="Austria">Austria</option>
   <option>Hungary</option>
   <option>Greece</option>
   
-</select>
+</select><br><br><br>
+
+
+  Horsepower of your car: <input id="horsepower" type="text" name="number"><br><br>
+  <input type="button" onclick="myFunction()" value="calculate">
+  <div id="result">
+  	
+  </div>
+
 </form>
 
 <script>
-	var info= 'Your name, Age, Country, Hoursepower of your car'
+	var info= 'Your name, Age, Country, Horsepower of your car'
 function myFunction() {
-  document.getElementById("qoute").calculate();
+	age = parseInt(document.getElementById("age").value);
+	horsepower = parseInt(document.getElementById("horsepower").value);
+	country = document.getElementById("space").value;
+	if(country=="Austria") {
+		cost=horsepower*100/age+50
+	} else if(country=="Hungary") {
+		cost=horsepower* 120/age + 100 
+	} else {
+		cost=horsepower* 150/(age +3)
+	}
+	result = document.getElementById("result")
+	result.innerHTML = cost
 }
 
 
