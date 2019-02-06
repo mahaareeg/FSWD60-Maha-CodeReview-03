@@ -24,17 +24,109 @@
 	font-family: arial, sans-serif;
 
 	}
+h3 {
+	text-align: center;
+}
 	#qoute{
-        width: 300px;
-        height: 300px;
-		margin-left: 10px;
-		margin-right: 10px;
-		border-right: 5px;
-	   border-left: 5px;
-	  
-		
-		
-	} 
+    width: 600px;
+    height: 400px;
+   margin: 0 auto;
+   border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+ } 
+ 	
+
+	#namm {
+  width: 250px;
+  padding: 10px 10px;
+  border-left: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+float: left;
+
+} 
+#namm input{
+	width: 220px;
+	height: 50px;
+
+  
+
+}
+#agge{
+	width: 250px;
+  padding: 10px 10px;
+  border-right: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+float: right;
+	
+}
+#agge input{
+	width: 220px;
+	height: 50px;
+}
+#count{
+	width: 250px;
+  padding: 10px 10px;
+  border-left: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+float: left;
+}
+#count select{
+	width: 220px;
+	height: 50px;
+}
+
+#powe {
+	width: 250px;
+  padding: 10px 10px;
+  border-right: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+float: right;
+}
+#powe input{
+	width: 220px;
+	height: 50px;
+}
+	
+	#butt {
+		width: 250px;
+  padding: 10px 10px;
+  margin-left: 170px;
+ 
+  display: inline-block;
+
+
+	}
+#butt input[type=button]{
+	background-color: #4CAF50;
+    color: white;
+   width: 220px; 
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  
+  
+}
+ #result {
+ 	width: 100%;
+ 	text-align: center;
+
+}
+
+
+
 </style>
 
 	
@@ -42,32 +134,44 @@
 <body>
 
 <header>
-<h3>Great coverage begins with a custom qoute</h3>
+<h3>Great coverage begins<br> with a custom qoute</h3>
 </header>
  
-
-<form id="qoute">
-
-  Your name: <input type="text" name="sname"><br><br><br>
-  Age: <input id="age" type="text" name="yage"><br><br><br>
-  Country: 
-  <select id="space">
-
+<div id="qoute">
+<form action="action_page.php">
+<div id="namm">
+<h4> Your name:</h4>
+ <input type="text" name="sname"> 
+</div>
+<div id="agge">
+  <h4>Age:</h4>
+   <input id="age" type="text" name="yage">
+</div>
+ <div id="count">
+ 	<h4> Country:</h4>
+   <select id="space">
   <option value="Austria">Austria</option>
   <option>Hungary</option>
   <option>Greece</option>
   
-</select><br><br><br>
+</select>
+</div>
+<div id="powe">
+ <h4> Horsepower of your car:</h4>
+   <input id="horsepower" type="text" name="number">
+</div>
 
-
-  Horsepower of your car: <input id="horsepower" type="text" name="number"><br><br>
-  <input type="button" onclick="myFunction()" value="calculate">
+<div id="butt">
+  <input type="button" onclick="myFunction()" value="Calculate">
+</div>
   <div id="result">
-  	
+
   </div>
+  	
+ 
 
 </form>
-
+</div>
 <script>
 	var info= 'Your name, Age, Country, Horsepower of your car'
 function myFunction() {
